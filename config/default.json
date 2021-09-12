@@ -1,0 +1,4 @@
+{
+  "configFilePath": "./.onboard/credentials",
+  "authTokenField": "auth_token"
+}
