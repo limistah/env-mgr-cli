@@ -21,6 +21,7 @@
     "config": "^3.3.6",
     "config-tiny": "^1.0.8",
     "cors": "^2.8.5",
+    "env-mgr": "^1.0.0",
     "express": "^4.17.1",
     "get-port": "^5.1.1",
     "js-yaml": "^4.1.0",

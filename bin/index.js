@@ -28,6 +28,6 @@ loadCredentialsFile
       } else {
         // console.log(e.message, "e");
       }
-      console.log("Please Authenticate Onboard with: onboard auth");
+      console.log("Please Authenticate Env Mgr with: env-mgr auth");
     }
   });
