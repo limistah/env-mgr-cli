@@ -1,5 +1,5 @@
 {
-  "name": "envr",
+  "name": "env-mgr",
   "version": "1.0.0",
   "description": "",
   "main": "bin/index.js",
@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "bin": {
-    "envr": "./bin/index.js"
+    "env-mgr": "./bin/index.js"
   },
   "author": "",
   "license": "ISC",
