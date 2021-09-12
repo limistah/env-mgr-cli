@@ -28,8 +28,8 @@ exports.handler = function (argv) {
       return console.log("only projects and items are supported");
     }
 
-    const projectUrl = `http://localhost:3200/projects/${argv.item_id}`;
-    const keyUrl = `http://localhost:3200/keys/${argv.item_id}`;
+    const projectUrl = `https://env-mgr.herokuapp.com/projects/${argv.item_id}`;
+    const keyUrl = `https://env-mgr.herokuapp.com/keys/${argv.item_id}`;
 
     if (argv.item_id) {
       axios({

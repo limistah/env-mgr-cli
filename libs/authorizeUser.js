@@ -32,7 +32,7 @@ const authorizeUser = async (project = "default") => {
   const callbackURL = `http://localhost:${randomPort}/?challenge=${challengeKey}&project=${
     project || "default"
   }`;
-  const challengeBrowserURL = `http://localhost:3000/oauth?callback=${callbackURL}`;
+  const challengeBrowserURL = `https://upbeat-spence-5e3e3c.netlify.app/oauth?callback=${callbackURL}`;
   server = app.listen(randomPort, () => {
     console.log(
       `Authorizing User, continue in the browser at ${challengeBrowserURL}`

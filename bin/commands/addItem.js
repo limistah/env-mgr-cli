@@ -47,8 +47,8 @@ exports.handler = function (argv) {
         method: "POST",
         url:
           argv.item.toLowerCase() === "projects"
-            ? `http://localhost:3200/projects`
-            : `http://localhost:3200/keys`,
+            ? `https://env-mgr.herokuapp.com/projects`
+            : `https://env-mgr.herokuapp.com/keys`,
         data,
         headers: {
           "Content-Type": "application/json",

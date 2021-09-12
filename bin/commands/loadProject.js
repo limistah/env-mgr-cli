@@ -24,7 +24,7 @@ exports.handler = function (argv) {
       console.log("Please authorize the cli");
       return;
     }
-    const keyUrl = `http://localhost:3200/keys?project=${argv.project_id}&org=${projectCreds.org_id}`;
+    const keyUrl = `https://env-mgr.herokuapp.com/keys?project=${argv.project_id}&org=${projectCreds.org_id}`;
 
     axios(keyUrl, {
       headers: {

@@ -28,8 +28,8 @@ exports.handler = function (argv) {
     }
 
     if (argv.item.toLowerCase() === "projects" || argv.project_id) {
-      const projectUrl = `http://localhost:3200/projects?org=${projectCreds.org_id}`;
-      const keyUrl = `http://localhost:3200/keys?project=${argv.project_id}`;
+      const projectUrl = `https://env-mgr.herokuapp.com/projects?org=${projectCreds.org_id}`;
+      const keyUrl = `https://env-mgr.herokuapp.com/keys?project=${argv.project_id}`;
 
       axios(argv.item.toLowerCase() === "projects" ? projectUrl : keyUrl, {
         headers: {
