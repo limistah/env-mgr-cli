@@ -1,6 +1,12 @@
 #!/usr/bin/env node
 const loadCredentialsFile = require("../libs/loadCredentials");
 const authorizeUser = require("../libs/authorizeUser");
+const yargs = require("yargs");
+const { argv } = require("yargs");
+
+const options = yargs.option("a", {
+  alias: "auth",
+}).argv;
 
 loadCredentialsFile
   .then(async (val) => {
@@ -16,12 +22,12 @@ loadCredentialsFile
   })
   .catch(async (e) => {
     if (e.name === "NO_AUTH") {
-      // Check if the auth argument is passed, else tell the user that the auth is missing
       if (options.auth) {
         // Initialize authorization
-        await authorizeUser(options.auth);
+        await authorizeUser(options.auth === true ? "default" : options.auth);
       } else {
-        console.log(e.message);
+        // console.log(e.message, "e");
       }
+      console.log("Please Authenticate Onboard with: onboard auth");
     }
   });
